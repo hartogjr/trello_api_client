@@ -1,0 +1,56 @@
+// vim:set ts=4 sw=4 noet tw=120:
+= Trello API client
+Simon de_Hartog <simon@dehartog.name>
+:doctype: article
+
+**NOTE:** This application is not finished yet! Don't put effort in to it, unless you want to help developing it.
+
+== License information
+
+This software is licensed under the BSD-3 license. See the file named `LICENSE` for details. The RestClient-cpp
+submodule which is used, has its own license. See `restclient-cpp/LICENSE` for details.
+
+== Introduction
+
+I set up this project to delete all my archived Trello cards in one go,
+instead of having to delete every single card by hand. More information on why
+this is not possible in the Trello interface can be found in
+https://community.atlassian.com/t5/Trello-questions/How-can-i-delete-all-archived-cards/qaq-p/649283[this Atlassian thread].
+
+I want to be able to quickly and easily delete my archived cards because:
+
+* They contain private information
+* They clutter search results
+
+== Building the software
+
+This application needs the following libraries, which you should install before building:
+
+* cURL
+* cURL++ (also called curlpp)
+* jsoncpp
+* OpenSSL
+
+For setting it up, clone this repo and also clone the submodules:
+
+`git clone https://github.com/hartogjr/trello_api_client trello_api_client` +
+`cd trello_api_client` +
+`git submodule update --recursive --init`
+
+Ensure your build environment is in order, meaning that you have:
+
+* A C++ compiler
+* CMake
+* GNU Make
+* Basic development libraries and header files
+
+To actually build the program do this:
+
+* Go to the `bld` subdirectory: `cd bld`
+* Run CMake there: `cmake -DCMAKE_BUILD_TYPE=Debug ..`
+* Install missing packages if necessary and then run cmake again
+* When CMake finishes successfully, build the program: `make`
+* The application is then located in `bld/src` and named `tac` (Trello Api Client)
+* To run, execute `tac`, giving it the Trello API key and Token as parameters: +
+  `tac <Trello API key> <Trello Token>`
+* This should delete all archived Trello cards you have
