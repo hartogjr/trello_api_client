@@ -70,7 +70,6 @@ set (CMAKE_CXX_FLAGS_RELEASE "${CUSTOM_RELEASE}")
 
 find_package (CURL REQUIRED)
 find_package (Jsoncpp REQUIRED)
-find_package (OpenSSL REQUIRED COMPONENTS Crypto)
 pkg_check_modules (CURLPP REQUIRED curlpp)
 
 add_subdirectory (restclient-cpp)

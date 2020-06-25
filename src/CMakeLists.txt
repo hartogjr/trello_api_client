@@ -36,7 +36,6 @@ include_directories (
 	${CURL_INCLUDE_DIRS}
 	${CURLPP_INCLUDE_DIRS}
 	${Jsoncpp_INCLUDE_DIR}
-	${OPENSSL_INCLUDE_DIR}
 )
 
 add_executable (tac
@@ -47,6 +46,5 @@ target_link_libraries (tac
 	jsoncpp
 	${CURL_LIBRARIES}
 	${CURLPP_LIBRARIES}
-	${OPENSSL_CRYPTO_LIBRARY}
 	restclient-cpp
 )

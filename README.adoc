@@ -27,7 +27,6 @@ This application needs the following libraries, which you should install before 
 * cURL
 * cURL++ (also called curlpp)
 * jsoncpp
-* OpenSSL
 
 For setting it up, clone this repo and also clone the submodules:
 
