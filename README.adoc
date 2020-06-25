@@ -3,8 +3,6 @@
 Simon de_Hartog <simon@dehartog.name>
 :doctype: article
 
-**NOTE:** This application is not finished yet! Don't put effort in to it, unless you want to help developing it.
-
 == License information
 
 This software is licensed under the BSD-3 license. See the file named `LICENSE` for details. The RestClient-cpp
@@ -46,11 +44,12 @@ Ensure your build environment is in order, meaning that you have:
 
 To actually build the program do this:
 
-* Go to the `bld` subdirectory: `cd bld`
-* Run CMake there: `cmake -DCMAKE_BUILD_TYPE=Debug ..`
-* Install missing packages if necessary and then run cmake again
-* When CMake finishes successfully, build the program: `make`
-* The application is then located in `bld/src` and named `tac` (Trello Api Client)
-* To run, execute `tac`, giving it the Trello API key and Token as parameters: +
-  `tac <Trello API key> <Trello Token>`
-* This should delete all archived Trello cards you have
+. Go to the `bld` subdirectory: `cd bld`
+. Run CMake there: `cmake -DCMAKE_BUILD_TYPE=Debug ..`
+. Install missing packages if necessary and then run cmake again
+. When CMake finishes successfully, build the program: `make`
+. The application is then located in `bld/src` and named `tac` (Trello Api Client)
+. To run, execute `tac`, giving it the Trello API Token as parameter: +
+  `tac <Trello API Token>`
+. This should delete all archived Trello cards you have
+. You may have to run the command multiple times when you have a lot of cards
